@@ -50,7 +50,6 @@ Address.prototype.toBase58Check = function () {
 
 Address.prototype.toOutputScript = function () {
   var scriptType = findScriptTypeByVersion(this.version)
-
   if (scriptType === 'pubkeyhash') return scripts.pubKeyHashOutput(this.hash)
   if (scriptType === 'scripthash') return scripts.scriptHashOutput(this.hash)
 

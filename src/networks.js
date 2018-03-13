@@ -133,7 +133,7 @@ var networks = {
     },
     pubKeyHash: 0x35,
     scriptHash: 0x70,
-    wif: 0x80,
+    wif: 0xb5,
     dustThreshold: 5460,
     dustSoftThreshold: 5460,
     feePerKb: 10000,

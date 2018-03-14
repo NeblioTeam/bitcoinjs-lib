@@ -134,8 +134,22 @@ var networks = {
     pubKeyHash: 0x35,
     scriptHash: 0x70,
     wif: 0xb5,
-    dustThreshold: 5460,
-    dustSoftThreshold: 5460,
+    dustThreshold: 10000,
+    dustSoftThreshold: 10000,
+    feePerKb: 10000,
+    estimateFee: estimateFee('neblio')
+  },
+  neblio_testnet: {
+    magicPrefix: '\x18Neblio Signed Message:\n',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x41,
+    scriptHash: 0x7f,
+    wif: 0xb5,
+    dustThreshold: 10000,
+    dustSoftThreshold: 10000,
     feePerKb: 10000,
     estimateFee: estimateFee('neblio')
   }

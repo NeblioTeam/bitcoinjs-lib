@@ -338,7 +338,7 @@ Transaction.prototype.setInputScript = function (index, script) {
 
 // FIXME: remove in 2.x.y
 Transaction.prototype.sign = function (index, privKey, hashType) {
-  console.warn('Transaction.prototype.sign is deprecated.  Use TransactionBuilder instead.')
+  // console.warn('Transaction.prototype.sign is deprecated.  Use TransactionBuilder instead.')
 
   var prevOutScript = privKey.pub.getAddress().toOutputScript()
   var signature = this.signInput(index, prevOutScript, privKey, hashType)
@@ -349,7 +349,7 @@ Transaction.prototype.sign = function (index, privKey, hashType) {
 
 // FIXME: remove in 2.x.y
 Transaction.prototype.signInput = function (index, prevOutScript, privKey, hashType) {
-  console.warn('Transaction.prototype.signInput is deprecated.  Use TransactionBuilder instead.')
+  // console.warn('Transaction.prototype.signInput is deprecated.  Use TransactionBuilder instead.')
 
   hashType = hashType || Transaction.SIGHASH_ALL
 
@@ -361,7 +361,7 @@ Transaction.prototype.signInput = function (index, prevOutScript, privKey, hashT
 
 // FIXME: remove in 2.x.y
 Transaction.prototype.validateInput = function (index, prevOutScript, pubKey, buffer) {
-  console.warn('Transaction.prototype.validateInput is deprecated.  Use TransactionBuilder instead.')
+  // console.warn('Transaction.prototype.validateInput is deprecated.  Use TransactionBuilder instead.')
 
   var parsed = ECSignature.parseScriptSignature(buffer)
   var hash = this.hashForSignature(index, prevOutScript, parsed.hashType)
